@@ -90,8 +90,8 @@ function caseInSwitch(val)
     switch(val)
     {
         case 1:
-            answer = "Alpha";
-            break;
+            answer = "Alpha";   //if you leave out the code and break here, it will use the first available code under the first switch it comes to.
+            break;              //so if case 1 and case 2 do not have code or break statements, but case 3 does, 1, 2, or 3 will all execute case 3's code.
         case 2:
             answer = "Beta";
             break;
