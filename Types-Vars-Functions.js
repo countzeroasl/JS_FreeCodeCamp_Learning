@@ -113,3 +113,15 @@ console.log(caseInSwitch(2));
 console.log(caseInSwitch(3));
 console.log(caseInSwitch(4));
 console.log(caseInSwitch(5));
+
+var moldingMachine = {  //This is an Object with properties
+    "Make" : "Sumitomo",
+    "Tonnage" : 180,
+    "Barrel" : "C"
+}
+
+console.log(moldingMachine);    //Object properties print out in a linked list.
+moldingMachine.corePull = "No"; //I can add a property like this
+console.log(moldingMachine);
+delete moldingMachine.Barrel;   //I can also delete properties from an object.
+console.log(moldingMachine);
