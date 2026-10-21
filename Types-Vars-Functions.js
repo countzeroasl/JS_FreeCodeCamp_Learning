@@ -62,3 +62,24 @@ function compareEquality2(c, d)
 
 console.log(compareEquality(10, "10"));
 console.log(compareEquality2(10, "10"));
+
+function compareEquality3(e, f)
+{
+    if (e != f) //an unequal comparison converts types before comparing
+    {
+        return "'e' and 'f' are not equal.";
+    }
+    return "'e' and 'f' are equal.";
+}
+
+function compareEquality4(g, h)
+{
+    if (g !== h)    //a double unequal comparison does not convert types.  It is a strict comparsion.
+    {
+        return "'g' and 'h' are not equal.";
+    }
+    return "'g' and 'h' are equal.";
+}
+
+console.log(compareEquality3(10, "10"));
+console.log(compareEquality4(10, "10"));
