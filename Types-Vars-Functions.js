@@ -83,3 +83,29 @@ function compareEquality4(g, h)
 
 console.log(compareEquality3(10, "10"));
 console.log(compareEquality4(10, "10"));
+
+function caseInSwitch(val)
+{
+    var answer = "";
+    switch(val)
+    {
+        case 1:
+            answer = "Alpha";
+            break;
+        case 2:
+            answer = "Beta";
+            break;
+        case 3:
+            answer = "Gamma";
+            break;
+        case 4:
+            answer = "Delta";
+            break;
+    }
+    return answer;
+}
+
+console.log(caseInSwitch(1));
+console.log(caseInSwitch(2));
+console.log(caseInSwitch(3));
+console.log(caseInSwitch(4));
