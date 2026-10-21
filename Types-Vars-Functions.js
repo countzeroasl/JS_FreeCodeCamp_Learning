@@ -101,6 +101,9 @@ function caseInSwitch(val)
         case 4:
             answer = "Delta";
             break;
+        default:
+            answer = "Pass a valid argument, dummy!";
+            break;
     }
     return answer;
 }
@@ -109,3 +112,4 @@ console.log(caseInSwitch(1));
 console.log(caseInSwitch(2));
 console.log(caseInSwitch(3));
 console.log(caseInSwitch(4));
+console.log(caseInSwitch(5));
