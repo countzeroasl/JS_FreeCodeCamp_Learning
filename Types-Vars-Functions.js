@@ -188,3 +188,10 @@ function randomD20 ()
 diceRoll = randomD20();
 
 console.log(diceRoll);
+
+//Rest Operator (...) - collecting variable number of inputs into an array
+
+const sum = (function() {return function sum(...args) {return args.reduce((a, b) => a + b, 0);};})();
+
+console.log (sum(1, 2, 3, 4));
+console.log (sum(2, 4, 6, 8, 10, 12, 14));  //note that there is not a set number of arguments that have to be passed to (...args), the rest operator collects them all.
