@@ -74,11 +74,15 @@ function compareEquality3(e, f)
 
 function compareEquality4(g, h)
 {
-    if (g !== h)    //a double unequal comparison does not convert types.  It is a strict comparsion.
+   /* if (g !== h)    //a double unequal comparison does not convert types.  It is a strict comparsion.
     {
         return "'g' and 'h' are not equal.";
     }
-    return "'g' and 'h' are equal.";
+    return "'g' and 'h' are equal.";*/
+
+    //We can also do this with a ternary operator as shown below:
+
+    return (g !== h) ? "'g' and 'h' are not equal." : "'g' and 'h' are equal.";
 }
 
 console.log(compareEquality3(10, "10"));
@@ -125,3 +129,62 @@ moldingMachine.corePull = "No"; //I can add a property like this
 console.log(moldingMachine);
 delete moldingMachine.Barrel;   //I can also delete properties from an object.
 console.log(moldingMachine);
+
+//Control loops
+
+var i = 0;
+var myArray = [ ];
+
+while (i < 5)
+{
+    myArray.push(i);
+    i++;
+}
+
+console.log(myArray);
+
+
+var newArray = [ ];
+for (var i = 1; i <= 5; i++)
+{
+    newArray.push(i);
+}
+
+console.log(newArray);
+
+//iterating through multidimensional array with a for loop.
+
+function multiplyAll (arr)
+{
+    var product = 1;
+
+    for (var i = 0; i < arr.length; i++)
+    {
+        for (var j = 0; j < arr[i].length; j++)
+        {
+            product *= arr[i][j]
+        }
+    }
+
+    return product;
+}
+
+var product = multiplyAll ([[1, 2], [3, 4], [5, 6, 7]]);
+
+console.log(product);
+
+//Dice rolling (random)
+
+var diceRoll = 0;
+
+function randomD20 ()
+{
+    /* Math.random() generates a random decimal between 0 and 1, including 0, but not including 1.  Here, we are multiplying that by the number of sides on the dice we want to roll.
+    Once we have done that, we use Math.floor() to round the decimal down to the next lower integer.  Finally, since a dice goes from 1 to 20, not 0 to 19, we add one in case
+    Math.random() picked 0 (0 * 20 is 0 - a value we can't roll on the die)*/
+    return Math.floor((Math.random() * 20) + 1);
+}
+
+diceRoll = randomD20();
+
+console.log(diceRoll);
